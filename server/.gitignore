@@ -19,6 +19,8 @@ node_modules/
 
 # Generated js code
 dist
+dist/*.js
+
 
 # dotenv environment variable files
 .env
