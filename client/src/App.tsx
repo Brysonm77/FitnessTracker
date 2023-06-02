@@ -1,9 +1,10 @@
+import Login from './components/login';
 import React from 'react';
 
 function App() {
   return (
     <div>
-      <div>PAULO IS A MONKEY.</div>
+      <Login />
     </div>
   );
 }
