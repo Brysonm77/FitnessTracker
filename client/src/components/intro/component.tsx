@@ -8,7 +8,7 @@ const starAni = keyframes`
   to { opacity: .6; color: ${$skyBlue}; }
 `;
 
-const words = ['Start Your Journey', 'Be Better Than Yesterday', 'Test'];
+const words = ['Start Your Journey Today', 'Be Better Than Yesterday', 'Test'];
 
 const styles = {
   background: css({
@@ -26,7 +26,14 @@ const styles = {
     animation: `${starAni} 4s linear infinite alternate`,
   }),
   text: css({
-    fontSize: '10rem',
+    fontSize: '7rem',
+    fontFamily: 'playfair',
+    fontStyle: 'italic',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: '0 auto',
+    height: '100%',
   }),
 };
 
