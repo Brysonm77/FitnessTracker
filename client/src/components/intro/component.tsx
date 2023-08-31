@@ -2,13 +2,14 @@ import { css, keyframes } from '@emotion/react';
 import { $skyBlue, $purple, $violet, $white } from '../../assets/colors';
 import Star from '../../assets/img/Star.jpg';
 import { useEffect, useState } from 'react';
+import Info from './info';
 
 const starAni = keyframes`
   from { opacity: .1; color: ${$white}; }
-  to { opacity: .6; color: ${$skyBlue}; }
+  to { opacity: .8; color: ${$skyBlue}; }
 `;
 
-const words = ['Start Your Journey Today', 'Be Better Than Yesterday', 'Test'];
+const words = ['Start Your Journey Today', 'Be Better Than Yesterday', 'You Are Amazing'];
 
 const styles = {
   background: css({
@@ -59,6 +60,7 @@ const Intro = () => {
           </div>
         </div>
       </div>
+      <Info />
     </>
   );
 };

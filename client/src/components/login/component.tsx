@@ -4,7 +4,7 @@ import { $purple, $violet } from '../../assets/colors';
 
 const styles = {
   leftSideBot: css({
-    background: `linear-gradient(to bottom, ${$purple} 40%, ${$violet})`,
+    background: `linear-gradient(to bottom, black 1%, ${$purple} 40%, ${$violet})`,
   }),
   rightSide: css({
     height: '100vh',
