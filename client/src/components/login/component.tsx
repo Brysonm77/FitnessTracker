@@ -13,8 +13,8 @@ const styles = {
   loginTitle: {
     color: 'black',
     WebkitTextStroke: `2px ${$violet}`, // Purple outline effect for Chrome, Safari
-    MozTextStroke: `2px ${$purple}`, // Firefox
-    msTextStroke: `2px ${$purple}`, //  Internet Explorer/Edge
+    MozTextStroke: `2px ${$violet}`, // Firefox
+    msTextStroke: `2px ${$violet}`, //  Internet Explorer/Edge
     fontSize: '5.5rem',
     fontFamily: 'playfair',
     fontWeight: 600,

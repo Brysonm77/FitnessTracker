@@ -1,19 +1,20 @@
 import { css, keyframes } from '@emotion/react';
-import { $purple, $violet } from '../../assets/colors';
+import { $skyBlue, $purple, $violet, $white } from '../../assets/colors';
 import Star from '../../assets/img/Star.jpg';
+import { useEffect, useState } from 'react';
 
 const starAni = keyframes`
-from { opacity: .6;
-}
-to {
-  opacity: 0;
-}`;
+  from { opacity: .1; color: ${$white}; }
+  to { opacity: .6; color: ${$skyBlue}; }
+`;
+
+const words = ['Start Your Journey', 'Be Better Than Yesterday', 'Test'];
 
 const styles = {
   background: css({
     position: 'relative',
     background: `linear-gradient(30deg, black 1%, ${$purple} 60%, ${$violet})`,
-    height: '100vh',
+    height: '35vh',
   }),
   stars: css({
     position: 'absolute',
@@ -24,13 +25,32 @@ const styles = {
     background: `url(${Star}) repeat`,
     animation: `${starAni} 4s linear infinite alternate`,
   }),
+  text: css({
+    fontSize: '10rem',
+  }),
 };
 
 const Intro = () => {
+  const [currentWord, setCurrentWord] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentWord((prevIndex) => (prevIndex + 1) % words.length);
+    }, 8000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+
   return (
     <>
       <div css={styles.background}>
-        <div css={styles.stars}></div>
+        <div css={styles.stars}>
+          <div css={styles.text} key={currentWord}>
+            {words[currentWord]}
+          </div>
+        </div>
       </div>
     </>
   );
