@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { $red, $purple, $skyBlue, $violet } from '../../assets/colors';
+import { $red, $purple, $skyBlue, $violet, $grey } from '../../assets/colors';
 
 const styles = {
   bubbleOne: css({
@@ -42,11 +42,15 @@ const styles = {
     fontFamily: 'helvetica',
     padding: '.5rem',
   }),
+  sty: {
+    backgroundColor: $grey,
+    height: '120vh',
+  },
 };
 
 const Info = () => {
   return (
-    <div>
+    <div style={styles.sty}>
       <h1 css={styles.title}>Why Join?</h1>
       <div className="row" css={styles.bubbleOne}>
         <div css={styles.border}>
