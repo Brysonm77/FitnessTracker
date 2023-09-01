@@ -5,13 +5,16 @@ import { useEffect, useState } from 'react';
 import Info from './info';
 
 const starAni = keyframes`
-  from { opacity: .1; color: ${$white}; }
-  to { opacity: .8; color: ${$skyBlue}; }
+  from { opacity: .4; color: ${$white}; }
+  to { opacity: .85; color: ${$skyBlue}; }
 `;
 
 const words = ['Start Your Journey Today', 'Be Better Than Yesterday', 'You Are Amazing'];
 
 const styles = {
+  landing: {
+    height: '120vh',
+  },
   background: css({
     position: 'relative',
     background: `linear-gradient(30deg, black 1%, ${$purple} 60%, ${$violet})`,
@@ -52,7 +55,7 @@ const Intro = () => {
   }, []);
 
   return (
-    <>
+    <div style={styles.landing}>
       <div css={styles.background}>
         <div css={styles.stars}>
           <div css={styles.text} key={currentWord}>
@@ -61,7 +64,7 @@ const Intro = () => {
         </div>
       </div>
       <Info />
-    </>
+    </div>
   );
 };
 

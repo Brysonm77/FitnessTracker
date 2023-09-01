@@ -1,15 +1,26 @@
 import { css } from '@emotion/react';
-import { $purple, $skyBlue, $violet } from '../../assets/colors';
+import { $red, $purple, $skyBlue, $violet } from '../../assets/colors';
 
 const styles = {
   bubbleOne: css({
     height: '50vh',
     width: '95vw',
-    marginTop: '5%',
+    marginTop: '2%',
     marginLeft: '2.5%',
     borderRadius: '20px',
     display: 'flex',
     justifyContent: 'center',
+  }),
+  title: css({
+    fontSize: '7rem',
+    fontFamily: 'playfair',
+    fontWeight: 600,
+    marginLeft: '3%',
+    marginTop: '2%',
+    background: `-webkit-linear-gradient(left,  black, ${$red}, ${$purple} )`,
+    backgroundClip: 'text',
+    color: 'transparent',
+    display: 'inline-block',
   }),
   border: css({
     border: '1px solid transparent',
@@ -20,18 +31,26 @@ const styles = {
       0 0 40px ${$violet}
     `,
   }),
+  head: css({
+    padding: '1rem',
+    fontSize: '3rem',
+    fontStyle: 'italic',
+    fontFamily: 'helvetica',
+  }),
   para: css({
     fontSize: '1.5rem',
     fontFamily: 'helvetica',
-    padding: '15px',
+    padding: '.5rem',
   }),
 };
 
 const Info = () => {
   return (
     <div>
+      <h1 css={styles.title}>Why Join?</h1>
       <div className="row" css={styles.bubbleOne}>
         <div css={styles.border}>
+          <h2 css={styles.head}>Explore the galaxy and grow </h2>
           <p className="d-flex justify-content-center" css={styles.para}>
             Sint culpa anim officia id incididunt voluptate nostrud adipisicing Lorem eiusmod. Tempor incididunt fugiat
             voluptate tempor eiusmod eiusmod et mollit id quis sunt sunt esse. Dolore do nulla pariatur aliqua amet ea
